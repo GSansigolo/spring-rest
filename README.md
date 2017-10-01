@@ -1,4 +1,5 @@
 ## SptingREST API
+Prototipo de Web Service para visualização de dados, sistema desenvolvido em Java com biblioteca Spring, REST Framework e Hibernate consumindo dados via PostgreSQL.
 
 ### Tecnologias usadas:
 
@@ -9,7 +10,7 @@
 * Hibernate;
 * Spring Security
 
-##### Para rodar
+### Para rodar
 ```bash
 mvn spring-boot:run
 ```
