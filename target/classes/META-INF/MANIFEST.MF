@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-boot-rest-api-postgresql
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: sansigolo
+Implementation-Vendor-Id: com.kaluzny
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ rest-api-postgresql/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

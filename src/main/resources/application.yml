@@ -2,12 +2,14 @@
 spring:
   profiles:
     active: development
+
 # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/book_db?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://localhost:5432/db?createDatabaseIfNotExist=true
     username: postgres
-    password: postgres
+    password: teste
+
 # JPA properties
   jpa:
     hibernate:
@@ -17,6 +19,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
     generate-ddl: false
+
 # Logger configuration
 logging:
   pattern:
@@ -24,10 +27,12 @@ logging:
   level:
     org.springframework: INFO
     org.hibernate: DEBUG
+
 # Server configuration
 server:
   port: 8080
   sessionTimeout: 30
+
 # Security configuration
 security:
   user:

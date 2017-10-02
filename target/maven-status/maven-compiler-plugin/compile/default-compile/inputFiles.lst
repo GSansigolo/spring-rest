@@ -1,4 +1,4 @@
-/home/sansigolo/eclipse-workspace/SptingREST API/src/main/java/com/kaluzny/domain/BookRepository.java
-/home/sansigolo/eclipse-workspace/SptingREST API/src/main/java/com/kaluzny/web/BookRestController.java
-/home/sansigolo/eclipse-workspace/SptingREST API/src/main/java/com/kaluzny/Application.java
-/home/sansigolo/eclipse-workspace/SptingREST API/src/main/java/com/kaluzny/domain/Book.java
+/home/sansigolo/Documents/git/SpringREST-API/src/main/java/com/kaluzny/domain/Match.java
+/home/sansigolo/Documents/git/SpringREST-API/src/main/java/com/kaluzny/Application.java
+/home/sansigolo/Documents/git/SpringREST-API/src/main/java/com/kaluzny/web/MatchRestController.java
+/home/sansigolo/Documents/git/SpringREST-API/src/main/java/com/kaluzny/domain/MatchRepository.java
