@@ -3,17 +3,39 @@ package com.kaluzny.domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "match")
+
 public class Match {
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+     @Column(name="id_match")
+     @JsonView(View.All.class)
 	private Integer idMatch;
-	private Integer numberPlayers;
+
+	 @Column(name="number_players")
+     @JsonView(View.All.class)
+    private Integer numberPlayers;
+
+     @Column(name="winner")
+     @JsonView(View.All.class)
 	private String winner;
+    
+     @Column(name="score")
+     @JsonView(View.All.class)
 	private Integer score;
+    
+     @Column(name="number_spike")
+     @JsonView(View.All.class)
 	private Integer numberSpike;
+    
+     @Column(name="number_fireball")
+     @JsonView(View.All.class)
 	private Integer numberFireball;
+    
+     @Column(name="number_nuke")
+     @JsonView(View.All.class)
 	private Integer numberNuke;
     
     
