@@ -1,4 +1,4 @@
-## SptingREST API
+## SpringREST API
 Prototipo de Web Service para visualização de dados, sistema desenvolvido em Java com biblioteca Spring, REST Framework e Hibernate consumindo dados via PostgreSQL.
 
 ### Tecnologias usadas:
@@ -10,14 +10,16 @@ Prototipo de Web Service para visualização de dados, sistema desenvolvido em J
 * Hibernate;
 * Spring Security
 
-### Para rodar
+### Para executar
+O primeiro passo para executar o projeto é colocar o banc de dados no seu postgres, para isso restaure o backup, o mesmo se encontra dentro da pasta "/db", é o arquivo de nome "backup_banco.backup".
+
 ```bash
 mvn spring-boot:run
 ```
 
 ### Postman: 
-[http://localhost:8080/api/books](http://localhost:8080/api/books)
+[http://localhost:8080/api/matchs](http://localhost:8080/api/matchs)
 
-![alt tag](http://i.piccy.info/i9/6fe13c87057a456bf9d25c151197c4d9/1479742734/78918/1085055/restpro.jpg)
+![alt tag](https://i.imgur.com/20sZRHN.png)
 
 
