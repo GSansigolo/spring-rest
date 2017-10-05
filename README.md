@@ -11,7 +11,7 @@ Prototipo de Web Service para visualização de dados, sistema desenvolvido em J
 * Spring Security
 
 ### Para executar
-O primeiro passo para executar o projeto é colocar o banc de dados no seu postgres, para isso restaure o backup, o mesmo se encontra dentro da pasta "/db", é o arquivo de nome "backup_banco.backup".
+O primeiro passo para executar o projeto é colocar o banco de dados no seu postgres, para isso restaure o backup, o mesmo se encontra dentro da pasta "/db", é o arquivo de nome "backup_banco.backup".
 
 ```bash
 mvn spring-boot:run
