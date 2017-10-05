@@ -2,6 +2,9 @@ package com.kaluzny.domain;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.kaluzny.web.MatchService;
+
 @Entity
 @Table(name = "match")
 
@@ -11,31 +14,31 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
      @Column(name="id_match")
-     @JsonView(View.All.class)
-	private Integer idMatch;
+	 @JsonView(MatchService.class)
+	 private Integer idMatch;
 
 	 @Column(name="number_players")
-     @JsonView(View.All.class)
+	 @JsonView(MatchService.class)
     private Integer numberPlayers;
 
      @Column(name="winner")
-     @JsonView(View.All.class)
+     @JsonView(MatchService.class)
 	private String winner;
     
      @Column(name="score")
-     @JsonView(View.All.class)
+     @JsonView(MatchService.class)
 	private Integer score;
     
      @Column(name="number_spike")
-     @JsonView(View.All.class)
+     @JsonView(MatchService.class)
 	private Integer numberSpike;
     
      @Column(name="number_fireball")
-     @JsonView(View.All.class)
+     @JsonView(MatchService.class)
 	private Integer numberFireball;
     
      @Column(name="number_nuke")
-     @JsonView(View.All.class)
+     @JsonView(MatchService.class)
 	private Integer numberNuke;
     
     
