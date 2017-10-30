@@ -1,0 +1,17 @@
+com/nouhoun/springboot/jwt/integration/config/AdditionalWebConfig.class
+com/nouhoun/springboot/jwt/integration/service/GenericService.class
+com/nouhoun/springboot/jwt/integration/domain/User.class
+com/nouhoun/springboot/jwt/integration/service/impl/GenericServiceImpl.class
+com/nouhoun/springboot/jwt/integration/config/DatasourceConfig.class
+com/nouhoun/springboot/jwt/integration/domain/MatchRepository.class
+com/nouhoun/springboot/jwt/integration/controller/ResourceController.class
+com/nouhoun/springboot/jwt/integration/domain/RandomCity.class
+com/nouhoun/springboot/jwt/integration/repository/RandomCityRepository.class
+com/nouhoun/springboot/jwt/integration/repository/RoleRepository.class
+com/nouhoun/springboot/jwt/integration/config/AuthorizationServerConfig.class
+com/nouhoun/springboot/jwt/integration/repository/UserRepository.class
+com/nouhoun/springboot/jwt/integration/service/impl/AppUserDetailsService.class
+com/nouhoun/springboot/jwt/integration/domain/Role.class
+com/nouhoun/springboot/jwt/integration/config/SecurityConfig.class
+com/nouhoun/springboot/jwt/integration/SpringbootJwtApplication.class
+com/nouhoun/springboot/jwt/integration/domain/Match.class
