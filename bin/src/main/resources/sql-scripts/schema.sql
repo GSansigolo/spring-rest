@@ -4,6 +4,16 @@ CREATE TABLE random_city (
   PRIMARY KEY (id)
 );
 
+CREATE TABLE match (
+  id_match bigint(20) NOT NULL AUTO_INCREMENT,
+  number_players varchar(255) NOT NULL,
+  winner varchar(255) NOT NULL,
+  score varchar(255) NOT NULL,
+  number_spike varchar(255) NOT NULL,
+  number_fireball varchar(255) NOT NULL,
+  number_nuke varchar(255) NOT NULL
+);
+
 CREATE TABLE app_role (
   id bigint(20) NOT NULL AUTO_INCREMENT,
   description varchar(255) DEFAULT NULL,

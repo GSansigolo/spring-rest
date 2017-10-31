@@ -26,7 +26,7 @@ mvn spring-boot:run
 ![alt tag](https://i.imgur.com/20sZRHN.png)
 
 
- ### Primeiro, as informações importantes
+ ### Informações importantes
  
  * client: testjwtclientid
  * secret: XY7kmzoNzl100

@@ -1,35 +1,45 @@
 package com.nouhoun.springboot.jwt.integration.service.impl;
 
 import com.nouhoun.springboot.jwt.integration.domain.Match;
-import com.nouhoun.springboot.jwt.integration.domain.MatchRepository;
+import com.nouhoun.springboot.jwt.integration.domain.RandomCity;
 import com.nouhoun.springboot.jwt.integration.domain.User;
+import com.nouhoun.springboot.jwt.integration.repository.RandomCityRepository;
 import com.nouhoun.springboot.jwt.integration.repository.UserRepository;
 import com.nouhoun.springboot.jwt.integration.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.nouhoun.springboot.jwt.integration.repository.*;
 
 import java.util.List;
-import javax.inject.Inject;
 
+/**
+ * Created by nydiarra on 07/05/17.
+ */
 @Service
 public class GenericServiceImpl implements GenericService {
+	
     @Autowired
-
-    private GenericService repository;
-
     private UserRepository userRepository;
+    private MatchRepository repository;
 
+    @Autowired
+    private RandomCityRepository randomCityRepository;
 
     @Override
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
-    @Inject
-    public void setRepository(GenericService repository) {
-        this.repository = repository;
+    @Override
+    public List<User> findAllUsers() {
+        return (List<User>)userRepository.findAll();
     }
 
+    @Override
+    public List<RandomCity> findAllRandomCities() {
+        return (List<RandomCity>)randomCityRepository.findAll();
+    }
+    
     @Override
     public List<Match> findByIdMatch(Integer idMatch){
         return repository.findByIdMatch(idMatch);
@@ -37,7 +47,7 @@ public class GenericServiceImpl implements GenericService {
 
     @Override
     public List<Match> findAll(){
-        return repository.findAll(); 
+        return (List<Match>) repository.findAll(); 
     }
     
     @Override
@@ -55,6 +65,4 @@ public class GenericServiceImpl implements GenericService {
         repository.deleteAll();
     }
 
-
 }
-
