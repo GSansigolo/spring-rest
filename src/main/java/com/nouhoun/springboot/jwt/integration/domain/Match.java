@@ -14,35 +14,28 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
      @Column(name="id_match")
-	 //@JsonView(GenericService.class)
-	 private Integer idMatch;
+	 private long idMatch;
 
 	 @Column(name="number_players")
-	 //@JsonView(GenericService.class)
-    private Integer numberPlayers;
+    private String numberPlayers;
 
      @Column(name="winner")
-     //@JsonView(GenericService.class)
 	private String winner;
     
      @Column(name="score")
-     //@JsonView(GenericService.class)
-	private Integer score;
+	private String score;
     
      @Column(name="number_spike")
-     //@JsonView(GenericService.class)
-	private Integer numberSpike;
+	private String numberSpike;
     
      @Column(name="number_fireball")
-     //@JsonView(GenericService.class)
-	private Integer numberFireball;
+	private String numberFireball;
     
      @Column(name="number_nuke")
-     //@JsonView(GenericService.class)
-	private Integer numberNuke;
+	private String numberNuke;
     
     
-    public Match(Integer idMatch, Integer numberPlayers, String winner, Integer score, Integer numberSpike, Integer numberFireball, Integer numberNuke) {
+    public Match(Long idMatch, String numberPlayers, String winner, String score, String numberSpike, String numberFireball, String numberNuke) {
         this.idMatch = idMatch;
 	    this.numberPlayers = numberPlayers;
 	    this.winner = winner;
@@ -55,19 +48,19 @@ public class Match {
     public Match() {
     }
 
-    public void setIdMatch(Integer idMatch){
+    public void setIdMatch(Long idMatch){
         this.idMatch = idMatch;
     }
 
-    public Integer getIdMatch() {
+    public Long getIdMatch() {
         return idMatch;
     }
 
-    public void setNumberPlayers(Integer numberPlayers){
+    public void setNumberPlayers(String numberPlayers){
         this.numberPlayers = numberPlayers;
     }
 
-    public Integer getNumberPlayers(){
+    public String getNumberPlayers(){
         return numberPlayers;
     }
 
@@ -79,35 +72,35 @@ public class Match {
         return winner;
     }
 
-    public void setScore(Integer score){
+    public void setScore(String score){
         this.score = score;
     }
 
-    public Integer getScore(){
+    public String getScore(){
         return score;
     }
 
-    public void setNumberSpike(Integer numberSpike){
+    public void setNumberSpike(String numberSpike){
         this.numberSpike = numberSpike;
     }
 
-    public Integer getNumberSpike(){
+    public String getNumberSpike(){
         return numberSpike;
     }
 
-    public void setNumberFireball(Integer numberFireball){
+    public void setNumberFireball(String numberFireball){
         this.numberFireball = numberFireball;
     }
 
-    public Integer getNumberFireball(){
+    public String getNumberFireball(){
         return numberFireball;
     }
 
-    public void setNumberNuke(Integer numberNuke){
+    public void setNumberNuke(String numberNuke){
         this.numberNuke = numberNuke;
     }
 
-    public Integer getNumberNuke(){
+    public String getNumberNuke(){
         return numberNuke;
     }
 

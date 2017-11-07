@@ -23,8 +23,9 @@ INSERT INTO user_role(user_id, role_id) VALUES(2,2);
 --INSERT INTO random_city(id, name) VALUES (8, 'Moscow');
 
 -- Populate match table
-INSERT INTO match(id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (1, '4', 'P2', '1200', '5', '4', '2');
-INSERT INTO match(id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (2, '3', 'P2', '1900', '6', '9', '1');
-INSERT INTO match(id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (3, '4', 'P3', '100', '8', '2', '5');
-INSERT INTO match(id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (4, '2', 'P1', '800', '1', '3', '9');
-INSERT INTO match(id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (5, '4', 'P4', '1000', '5', '5', '2');
+INSERT INTO match (id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (1, '4', 'P2', '1200', '5', '4', '2');
+INSERT INTO match (id_match, number_players, winner, score, number_spike, number_fireball, number_nuke) VALUES (2, '3', 'P2', '1900', '6', '9', '1');
+INSERT INTO match (id_match, number_players, winner, score, number_spike,  number_fireball, number_nuke) VALUES (3, '4', 'P3', '100', '8', '2', '5');
+INSERT INTO match (id_match, number_players, winner, score, number_spike,  number_fireball, number_nuke) VALUES (4, '2', 'P1', '800', '1', '3', '9');
+INSERT INTO match (id_match, number_players, winner, score, number_spike,  number_fireball, number_nuke) VALUES (5, '4', 'P4', '1000', '5', '5', '2');
+ 

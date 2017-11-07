@@ -11,7 +11,8 @@ CREATE TABLE match (
   score varchar(255) NOT NULL,
   number_spike varchar(255) NOT NULL,
   number_fireball varchar(255) NOT NULL,
-  number_nuke varchar(255) NOT NULL
+  number_nuke varchar(255) NOT NULL,
+  PRIMARY KEY (id_match)
 );
 
 CREATE TABLE app_role (

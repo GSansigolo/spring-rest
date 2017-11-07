@@ -20,7 +20,9 @@ public class GenericServiceImpl implements GenericService {
 	
     @Autowired
     private UserRepository userRepository;
-    private MatchRepository repository;
+    
+    @Autowired 
+    private MatchRepository matchRepository;
 
     @Autowired
     private RandomCityRepository randomCityRepository;
@@ -34,35 +36,36 @@ public class GenericServiceImpl implements GenericService {
     public List<User> findAllUsers() {
         return (List<User>)userRepository.findAll();
     }
+    
+    @Override
+    public Match findByIdMatch(Long idMatch){
+        return matchRepository.findByIdMatch(idMatch);
+    }
+
+    @Override
+    public List<Match> findAll(){
+        return (List<Match>)matchRepository.findAll(); 
+    }
+    
+    @Override
+    public Match save(Match match){
+        return matchRepository.save(match);
+    }
+    
+    @Override
+    public void delete(Long idMatch){
+        matchRepository.delete(idMatch);
+    }
+
+    @Override
+    public void deleteAll() {
+        matchRepository.deleteAll();
+    }
 
     @Override
     public List<RandomCity> findAllRandomCities() {
         return (List<RandomCity>)randomCityRepository.findAll();
     }
     
-    @Override
-    public List<Match> findByIdMatch(Integer idMatch){
-        return repository.findByIdMatch(idMatch);
-    }
-
-    @Override
-    public List<Match> findAll(){
-        return (List<Match>) repository.findAll(); 
-    }
-    
-    @Override
-    public Match save(Match match){
-        return repository.save(match);
-    }
-    
-    @Override
-    public void delete(Integer idMatch){
-        repository.delete(idMatch);
-    }
-
-    @Override
-    public void deleteAll() {
-        repository.deleteAll();
-    }
-
 }
+   

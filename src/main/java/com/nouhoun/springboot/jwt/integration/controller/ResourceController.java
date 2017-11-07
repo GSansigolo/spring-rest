@@ -23,58 +23,48 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/matchs")
 public class ResourceController {
+    
     @Autowired
     private GenericService userService;
-    
-    @Autowired
-    private GenericService service;
-    
-    public void setMatchService(GenericService service) {
-        this.service = service;
+
+    public void setMatchService(GenericService userService) {
+        this.userService = userService;
     }
+    
 
     @RequestMapping(value ="/users", method = RequestMethod.GET)
     @PreAuthorize("hasAuthority('ADMIN_USER')")
     public List<User> getUsers(){
         return userService.findAllUsers();
     }
-        @RequestMapping(
-            method = RequestMethod.GET)
+
+    @RequestMapping(method = RequestMethod.GET)
     @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
-    public ResponseEntity<Collection<Match>> getAllMatch() {
-        return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
+    public List<Match> getAllMatch() {
+        return userService.findAll();
     }
 
-    @RequestMapping(
-            value = "/{idMatch}",
-            method = RequestMethod.GET)
+    @RequestMapping(value = "/{idMatch}", method = RequestMethod.GET)
     @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
-    public ResponseEntity<List<Match>> findByIdMatch(@PathVariable Integer idMatch) {
-        return new ResponseEntity<>(service.findByIdMatch(idMatch), HttpStatus.OK);
+    public Match findByIdMatch(@PathVariable Long idMatch) {
+        return userService.findByIdMatch(idMatch);
     }
 
-    
-    @RequestMapping(
-            method = RequestMethod.POST)
+    @RequestMapping(value = "/{idMatch}", method = RequestMethod.DELETE)
     @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
-    public ResponseEntity<?> addMatch(@RequestBody Match match) {
-        service.save(match);
-        return new ResponseEntity<>(service.save(match), HttpStatus.CREATED);
+    public void deleteById(@PathVariable Long idMatch) {
+        userService.delete(idMatch);
+    }
+
+    @RequestMapping( method = RequestMethod.POST)
+    @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
+    public void addMatch(@RequestBody Match match) {
+        userService.save(match);
     }   
-    
-    @RequestMapping(
-            value = "/{idMatch}",
-            method = RequestMethod.DELETE)
-    @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
-    public void deleteMatchWithId(@PathVariable Integer idMatch) {
-        service.delete(idMatch);
-    }
 
-    @RequestMapping(
-            method = RequestMethod.DELETE)
+    @RequestMapping(method = RequestMethod.DELETE)
     @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
     public void deleteAllMatchs() {
-        service.deleteAll();
+        userService.deleteAll();
     }
-
 }

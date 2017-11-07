@@ -6,16 +6,13 @@ import com.nouhoun.springboot.jwt.integration.domain.Match;
 
 import java.util.List;
 
-/**
- * Created by nydiarra on 06/05/17.
- */
 public interface GenericService {
 
     List<User> findAllUsers();
 
     List<RandomCity> findAllRandomCities();
     
-    List<Match> findByIdMatch(Integer idMatch);
+    Match findByIdMatch(Long idMatch);
     
     User findByUsername(String username);
 
@@ -23,7 +20,7 @@ public interface GenericService {
 
     Match save(Match match);
 
-    void delete(Integer idMatch);
+    void delete(Long idMatch);
 
     void deleteAll(); 
 }
